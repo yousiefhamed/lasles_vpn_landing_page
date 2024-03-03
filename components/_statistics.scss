@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8.5px;
+    gap: 15px;
     margin: 0 auto;
     padding: 0;
 
@@ -43,6 +43,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: start;
+      line-height: 30px;
+      font-size: var(--font-size-25);
+      font-weight: var(--font-weight-bold);
+
+      span {
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-regular);
+      }
     }
   }
 }
