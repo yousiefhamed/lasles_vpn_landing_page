@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 46px 0;
+  &__logo {
+    width: 149px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    &__link {
+      font-weight: var(--font-weight-regular);
+      font-size: var(--font-size-16);
+      color: var(--color-grey);
+    }
+  }
+  &__accounts {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+
+    &__signIn.button {
+      padding: 0;
+    }
+  }
+}
