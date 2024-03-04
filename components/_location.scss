@@ -1,0 +1,18 @@
+.location {
+  width: 100%;
+  margin: 0 auto;
+
+  .marketing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img.global {
+      width: 90%;
+      margin: 150px 0 35px;
+    }
+    img.sponsored {
+      width: 100%;
+    }
+  }
+}
