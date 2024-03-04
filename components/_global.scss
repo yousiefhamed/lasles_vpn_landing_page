@@ -13,6 +13,7 @@ body {
   font-family: var(--font-family-rubik);
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-regular);
+  line-height: 30px;
 }
 
 .container {
@@ -42,6 +43,7 @@ a {
   outline: none;
   border: none;
   position: relative;
+  cursor: pointer;
 
   &.rad-50-transparent {
     border-radius: 50px;
@@ -90,4 +92,39 @@ a {
 
 .header__section {
   width: 100%;
+}
+
+.heading {
+  text-align: center;
+  font-size: var(--font-size-35);
+  font-weight: var(--font-weight-medium);
+  line-height: 50px;
+  color: var(--color-dark-blue);
+  margin: 0 auto;
+}
+
+.heading-desc {
+  text-align: center;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  line-height: 30px;
+  color: var(--color-grey);
+  max-width: 555px;
+  margin: 0 auto;
+}
+
+section.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.background::after {
+  content: "";
+  background-color: #f6f6f6;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
 }
