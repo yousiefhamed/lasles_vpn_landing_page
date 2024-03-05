@@ -14,12 +14,17 @@ body {
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-regular);
   line-height: 30px;
+  overflow-x: hidden;
 }
 
 .container {
   padding: 0 150px;
   max-width: calc(1440px - 300px);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 1048px) {
     padding: 0 90px;
   }
@@ -104,7 +109,7 @@ a {
   font-weight: var(--font-weight-medium);
   line-height: 50px;
   color: var(--color-dark-blue);
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .heading-desc {
@@ -130,7 +135,7 @@ section.background {
 }
 section.background::after {
   content: "";
-  background-color: #f6f6f6;
+  background: linear-gradient(#f6f6f6, #ffffff);
   width: calc(100vw - 15px);
   height: 100%;
   position: absolute;
