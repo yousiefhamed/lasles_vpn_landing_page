@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  width: calc(100vw - 15px);
+  width: 100vw;
   padding: 0;
   margin: 0;
   background-color: var(--color-white);
@@ -20,6 +20,7 @@ body {
 }
 
 .container {
+  width: calc(100% - 300px);
   padding: 0 150px;
   max-width: calc(1440px - 300px);
   margin: 0 auto;
@@ -28,10 +29,12 @@ body {
   justify-content: center;
   align-items: center;
   @media (max-width: 1200px) {
+    width: calc(100% - 180px);
     padding: 0 90px;
   }
   @media (max-width: 800px) {
-    padding: 0 50px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
   }
 }
 
