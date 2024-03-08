@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media (max-width: 1200px) {
     width: calc(100% - 180px);
     padding: 0 90px;

@@ -28,9 +28,30 @@
       }
     }
   }
+
   &__img {
     width: 100%;
     img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+
+    &__text {
+      order: 2;
+    }
+    &__img {
+      width: 80%;
+      margin: 0 auto;
+      order: 1;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__img {
       width: 100%;
     }
   }
