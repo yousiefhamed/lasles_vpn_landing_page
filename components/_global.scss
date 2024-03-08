@@ -2,6 +2,8 @@
 html,
 body {
   box-sizing: content-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 138px;
 }
 
 body {
@@ -25,7 +27,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: 1048px) {
+  @media (max-width: 1200px) {
     padding: 0 90px;
   }
   @media (max-width: 800px) {
@@ -132,6 +134,21 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100vw;
+    height: 138.39px;
+    padding: 0;
+    margin: 0;
+
+    &::after {
+      background-color: var(--color-white);
+    }
+  }
 }
 .background::after {
   content: "";

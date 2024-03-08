@@ -4,10 +4,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 46px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
   &__logo {
     width: 149px;
+    order: 1;
   }
   &__nav {
+    order: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,14 +27,115 @@
     }
   }
   &__accounts {
+    order: 3;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     gap: 30px;
 
     &__signIn.button {
       padding: 0;
       font-weight: var(--font-weight-medium);
+    }
+  }
+
+  .menu-button {
+    display: none;
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  &__accounts:has(input:checked) + .header__nav {
+    display: flex;
+    animation: faded 0.5s ease-in-out;
+
+    @keyframes faded {
+      0% {
+        width: 0;
+      }
+      50% {
+        width: 50%;
+      }
+      100% {
+        width: auto;
+      }
+    }
+
+    @keyframes carpet {
+      0% {
+        height: 138px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+      left: 0;
+      height: calc(100vh - calc(10vh + 50px + 138px));
+      background-color: var(--color-white);
+      justify-content: space-evenly;
+      animation: carpet 0.5s ease-in-out;
+    }
+  }
+
+  &__accounts:has(input:checked) button {
+    display: block;
+  }
+
+  @media (max-width: 1200px) {
+    &__nav {
+      width: 100%;
+      display: none;
+      position: absolute;
+      top: 100px;
+    }
+
+    &__accounts {
+      gap: 15px;
+
+      button {
+        padding-inline: 20px;
+      }
+    }
+
+    .menu-button {
+      display: block;
+
+      label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+
+        i {
+          width: fit-content;
+          height: fit-content;
+          font-size: var(--font-size-25);
+        }
+      }
+      input {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    &__accounts button {
+      display: none;
+      position: absolute;
+      top: 90vh;
+      z-index: 20;
+      left: 50%;
+      transform: translate(-50%);
+
+      &.header__accounts__signIn.button {
+        top: calc(90vh - 30px);
+      }
     }
   }
 }

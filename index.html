@@ -15,29 +15,36 @@
   </head>
   <body>
     <div class="container">
+      <div class="background blur"></div>
+      <header class="header">
+        <img src="./imgs/Logo.svg" alt="lasles vpn logo" class="header__logo" />
+
+        <nav class="header__accounts">
+          <div class="menu-button">
+            <input id="menu-btn" type="checkbox" />
+            <label for="menu-btn">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+
+          <button class="header__accounts__signIn button">Sign In</button>
+          <button
+            class="heaader__accounts__signUp button rad-50-transparent pink"
+          >
+            Sign Up
+          </button>
+        </nav>
+
+        <nav class="header__nav">
+          <a href="#about" class="header__nav__link">About</a>
+          <a href="#features" class="header__nav__link">Features</a>
+          <a href="#pricing" class="header__nav__link">Pricing</a>
+          <a href="#testomonials" class="header__nav__link">Testomonials</a>
+          <a href="#help" class="header__nav__link">Help</a>
+        </nav>
+      </header>
+      <!--
       <section class="header__section">
-        <header class="header">
-          <img
-            src="./imgs/Logo.svg"
-            alt="lasles vpn logo"
-            class="header__logo"
-          />
-          <nav class="header__nav">
-            <a href="#about" class="header__nav__link">About</a>
-            <a href="#features" class="header__nav__link">Features</a>
-            <a href="#pricing" class="header__nav__link">Pricing</a>
-            <a href="#testomonials" class="header__nav__link">Testomonials</a>
-            <a href="#help" class="header__nav__link">Help</a>
-          </nav>
-          <nav class="header__accounts">
-            <button class="header__accounts__signIn button">Sign In</button>
-            <button
-              class="heaader__accounts__signUp button rad-50-transparent pink"
-            >
-              Sign Up
-            </button>
-          </nav>
-        </header>
         <section class="hero">
           <div class="hero__text">
             <h1>Want anything to be easy with <span>LaslesVPN.</span></h1>
@@ -71,7 +78,9 @@
           </div>
         </section>
       </section>
-      <section class="features hero">
+    -->
+      <!--
+      <section id="features" class="features hero">
         <div class="hero__img">
           <img
             src="./imgs/Illustration 2.svg"
@@ -103,8 +112,9 @@
           </ul>
         </div>
       </section>
+    -->
       <!--
-      <section class="plans background">
+      <section id="pricing" class="plans background">
         <h2 class="heading">choose your plan</h2>
         <p class="heading-desc">
           Let's choose the package that is best for you and explore it happily
@@ -210,7 +220,8 @@
         </div>
       </section>
     -->
-      <section class="location">
+      <!--
+      <section id="about" class="location">
         <h2 class="heading">
           Huge Global Network <br />
           of Fast VPN
@@ -232,7 +243,9 @@
           />
         </div>
       </section>
-      <section class="customers">
+    -->
+      <!--
+      <section id="testomonials" class="customers">
         <h2 class="heading">
           Trusted by Thousands of <br />
           Happy Customers
@@ -334,7 +347,9 @@
           </div>
         </div>
       </section>
-      <footer class="footer background">
+    -->
+      <!--
+      <footer id="help" class="footer background">
         <section class="subscribtion">
           <div class="text">
             <h4>Subscribe Now for Get Special Features!</h4>
@@ -399,6 +414,6 @@
           </div>
         </section>
       </footer>
-    </div>
+    --></div>
   </body>
 </html>
