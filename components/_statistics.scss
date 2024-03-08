@@ -56,10 +56,14 @@
 
   @media (max-width: 650px) {
     flex-direction: column;
+    justify-content: stretch;
     height: auto;
 
     &__group {
-      width: 80%;
+      padding: 0 calc((80% - 160px) / 2);
+      width: 160px;
+      justify-content: stretch;
+      margin: 0 auto;
 
       &:nth-child(2) {
         border: none;

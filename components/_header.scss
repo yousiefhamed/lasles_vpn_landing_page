@@ -139,3 +139,17 @@
     }
   }
 }
+
+@media (max-width: 520px) {
+  .menu-button:has(input:checked) label {
+    &::after {
+      content: "";
+      background-color: var(--color-white);
+      width: 100%;
+      height: calc(100vh - 138px);
+      position: absolute;
+      top: 138px;
+      left: 0;
+    }
+  }
+}
