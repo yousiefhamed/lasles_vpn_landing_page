@@ -126,14 +126,14 @@ a {
   }
 }
 
-section.background {
+.background {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-section.background::after {
+.background::after {
   content: "";
   background: linear-gradient(#f6f6f6, #ffffff);
   width: calc(100vw - 15px);
