@@ -3,6 +3,10 @@
   position: relative;
   margin: 200px 0 50px;
 
+  @media (max-width: 454px) {
+    margin: 250px 0 50px;
+  }
+
   .background {
     background: #f6f6f6;
   }
@@ -25,7 +29,6 @@
       align-items: center;
       text-align: center;
     }
-
     .text {
       max-width: 370px;
     }
@@ -49,6 +52,10 @@
     justify-content: space-between;
     align-items: stretch;
     gap: 50px;
+
+    @media (max-width: 500px) {
+      padding-top: 350px;
+    }
 
     .brand {
       max-width: 340px;
