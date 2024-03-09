@@ -3,7 +3,6 @@
   position: relative;
 
   .feedback {
-    width: calc(100vw - 300px);
     position: absolute;
     top: 160px;
     left: 0;
@@ -11,11 +10,13 @@
     justify-content: start;
     align-items: stretch;
     gap: 50px;
+    width: calc(100vw - 300px);
     padding: 50px 150px;
     margin: 0 auto 0 -150px;
     overflow-x: auto;
     overflow-y: visible;
     scroll-snap-type: x mandatory;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -33,24 +34,12 @@
       background-color: var(--color-white);
       scroll-snap-align: center;
 
-      &:nth-child(1) {
+      &:hover,
+      &:active {
+        border-width: 3px;
         border-color: var(--color-main-red);
         position: relative;
-
-        &::after {
-          content: "";
-          width: 90%;
-          height: 50%;
-          position: absolute;
-          top: 30%;
-          left: 5%;
-          z-index: -1;
-          background: linear-gradient(
-            var(--color-white),
-            var(--color-dark-blue)
-          );
-          filter: blur(114px) opacity(15%);
-        }
+        box-shadow: 2px 4px 20px -2px var(--color-main-red);
       }
 
       .profile {
@@ -109,15 +98,50 @@
         }
       }
     }
+
+    @media (max-width: 1200px) {
+      width: calc(100% - 180px);
+      padding: 50px 90px;
+      margin-left: 0;
+    }
+    @media (max-width: 800px) {
+      width: calc(100% - 40px);
+      padding: 50px 20px;
+    }
+    @media (max-width: 550px) {
+      &__comment {
+        flex: 0 0 calc(100% - 60px);
+      }
+    }
+    @media (max-width: 400px) {
+      &__comment .profile {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__stars {
+          position: relative;
+          left: 70px;
+          height: 30px;
+        }
+      }
+    }
+    @media (max-width: 454px) {
+      top: 220px;
+    }
   }
   .fake {
     height: 330px;
     z-index: -5;
+
+    @media (max-width: 454px) {
+      height: 450px;
+    }
   }
   .slides {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 7;
 
     &__dots {
       display: flex;
@@ -131,10 +155,13 @@
         background-color: var(--color-grey);
         border-radius: 50%;
 
-        &.active {
+        &:hover,
+        &:active {
+          cursor: pointer;
           width: 45px;
           border-radius: 10px;
           background-color: var(--color-main-red);
+          transition: all 0.5s;
         }
       }
     }

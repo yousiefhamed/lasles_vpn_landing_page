@@ -9,7 +9,11 @@
     flex-direction: column;
     img.global {
       width: 90%;
-      margin: 150px 0 35px;
+      margin: 100px 0 35px;
+
+      @media (max-width: 800px) {
+        margin: 50px 0 35px;
+      }
     }
     img.sponsored {
       width: 100%;
